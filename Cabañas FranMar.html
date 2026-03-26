@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabañas FranMar Hornopiren</title>
+
+  <meta name="description" content="Arriendo de cabañas en Hornopirén, sur de Chile. Descanso, naturaleza y comodidad. Reserva directa por WhatsApp.">
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; scroll-behavior: smooth; }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+      url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    nav { background: #34495e; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      background: rgba(0,0,0,0.4);
+      padding: 25px;
+      border-radius: 10px;
+    }
+
+    .hero ul { list-style: none; padding: 0; }
+
+    .container { padding: 40px; max-width: 1200px; margin: auto; }
+
+    .cards { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 300px;
+      transition: 0.3s;
+    }
+
+    .card:hover { transform: scale(1.05); }
+
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+
+    .card-content { padding: 15px; }
+
+    button {
+      background: #27ae60;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+
+    input, textarea {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      margin: auto;
+      display: block;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Cabañas FranMar Hornopiren</h1>
+  <p>Descanso, naturaleza y comodidad</p>
+</header>
+
+<nav>
+  <a href="#">Inicio</a>
+  <a href="#cabanas">Cabañas</a>
+  <a href="#galeria">Galería</a>
+  <a href="#mapa">Ubicación</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>🌿 Tu escape perfecto en la naturaleza 🌿</h2>
+
+    <p>
+      Disfruta de nuestras cabañas con 
+      <strong>seguridad, comodidad y tranquilidad</strong>.
+    </p>
+
+    <ul>
+      <li>✨ Equipadas y acogedoras</li>
+      <li>🔒 Ambiente seguro</li>
+      <li>🌄 Naturaleza pura</li>
+      <li>🤫 Silencio total</li>
+    </ul>
+
+    <button onclick="reservar('Cabaña Familiar')">Reservar ahora</button>
+  </div>
+</section>
+
+<section class="container" id="cabanas">
+  <h2>Reserva Nuestra Cabaña</h2>
+
+  <div class="card">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipOxsqm1VYbGVJxCGFw8WuJovKGZ35GctErcPep3=s1360-w1360-h1020-rw">
+    <div class="card-content">
+      <h3>Cabaña Familiar</h3>
+      <p>Capacidad para 4 personas</p>
+      <button onclick="reservar('Cabaña Familiar')">Reservar</button>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="galeria">
+  <h2>Galería</h2>
+  <div class="gallery">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipMsiY3IPufvS_8pLc4SEk38ZwQMkTziDCgBVtue=s1360-w1360-h1020-rw">
+    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerNgVO3WdJnof68LinckfwQskd8OKnm7KsBaW_1ZLdgYWPLIZEFH7HXRjtzN7_8UgowjKqjig5hEZATCahInjHN2C0WZnS5MOLoprS4MElTQAAbbHJIVe58nm7KlM3k2Zf4Y5dkvMy29jeA=s1360-w1360-h1020-rw">
+    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepW1Y_ApnUju32b-HuwInqDbLMQzn-TqgvucUfDw0vMtcU_JYrTEFU-81AtXT5JRAjf49McqSpl2G-ZlTSaUZSIAykugqARRVy6_EvVv91brnAi14xpOvpNTPe6cMdK0n0W7jf6rZgizfk=s1360-w1360-h1020-rw">
+  </div>
+</section>
+
+<section class="container" id="mapa">
+  <h2>Ubicación</h2>
+  <iframe src="https://www.google.com/maps?q=caba%C3%B1as+franmar+hornopiren&output=embed"
+    width="100%" height="300" style="border:0;"></iframe>
+</section>
+
+<!-- FORMULARIO FUNCIONAL -->
+<section class="container" id="contacto">
+  <h2>Contactanós por correo</h2>
+
+  <form action="https://formsubmit.co/franyuliza@gmail.com" method="POST">
+
+    <input type="text" name="Nombre" placeholder="Nombre" required>
+    <br>
+
+    <input type="email" name="Email" placeholder="Correo" required>
+    <br>
+
+    <input type="tel" name="Telefono" placeholder="Teléfono" required>
+    <br>
+
+    <textarea name="Mensaje" placeholder="Mensaje" required></textarea>
+    <br>
+
+    <button type="submit">Enviar</button>
+
+    <!-- CONFIG -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nuevo cliente desde la web">
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2026 Cabañas FranMar</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/56947827890" target="_blank">💬</a>
+
+<script>
+  function reservar(cabana) {
+    const numero = '56947827890';
+    const mensaje = `Hola, quiero reservar la ${cabana}`;
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`);
+  }
+</script>
+
+</body>
+</html>
